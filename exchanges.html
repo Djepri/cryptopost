@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Lexend+Deca:wght@400;500&family=Space+Grotesk:wght@400;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <title>Cryptopost</title>
+  </head>
+  <body class="nosidebar-mobile">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.svg" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav me-auto my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownArticles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Articles
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownArticles">
+                <li><a class="dropdown-item" href="#">Coins</a></li>
+                <li><a class="dropdown-item" href="#">Tech</a></li>
+                <li><a class="dropdown-item" href="#">Tokens</a></li>
+                <li><a class="dropdown-item" href="#">Trading</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAcademy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Crypto Academy
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAcademy">
+                <li><a class="dropdown-item" href="#">Bitcoin</a></li>
+                <li><a class="dropdown-item" href="#">Etherium</a></li>
+                <li><a class="dropdown-item" href="#">Other crypto</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                <li><a class="dropdown-item" href="#">Wallets</a></li>
+                <li><a class="dropdown-item" href="#">Exchanges</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ms-auto">
+          <button type="button" class="btn btn-toggle-search" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
+            <svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block">
+              <path d="M16.7688 14.6976L13.4582 11.3876C13.3088 11.2382 13.1062 11.1552 12.8937 11.1552H12.3525C13.2689 9.9832 13.8135 8.50913 13.8135 6.90558C13.8135 3.09091 10.7221 0 6.90676 0C3.09144 0 0 3.09091 0 6.90558C0 10.7202 3.09144 13.8112 6.90676 13.8112C8.51058 13.8112 9.98491 13.2667 11.1571 12.3504V12.8915C11.1571 13.104 11.2401 13.3065 11.3895 13.4559L14.7001 16.7659C15.0122 17.078 15.517 17.078 15.8258 16.7659L16.7655 15.8264C17.0776 15.5143 17.0776 15.0097 16.7688 14.6976ZM6.90676 11.1552C4.55912 11.1552 2.65644 9.25613 2.65644 6.90558C2.65644 4.55834 4.5558 2.65599 6.90676 2.65599C9.25439 2.65599 11.1571 4.55502 11.1571 6.90558C11.1571 9.25281 9.25771 11.1552 6.90676 11.1552Z" fill="currentColor"/>
+            </svg>            
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="collapse" id="navbarSearch">
+        <form class="navbar-search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-auto d-none d-xl-block order-md-1">
+            <aside class="w-aside">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <h2 class="h5 mb-0">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary me-1">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.48102 13.4167C6.41452 13.4167 6.34743 13.405 6.28152 13.3811C6.02952 13.2895 5.87202 13.0375 5.90118 12.7709L6.34918 8.63336H2.91627C2.70102 8.63336 2.50327 8.51494 2.40177 8.32477C2.30027 8.13461 2.31193 7.90477 2.43152 7.72569L7.03285 0.842358C7.18218 0.618941 7.46452 0.526191 7.7171 0.618941C7.96968 0.710525 8.1266 0.962525 8.09743 1.22911L7.64943 5.36669H11.0829C11.2982 5.36669 11.4959 5.48511 11.5974 5.67527C11.6983 5.86544 11.6873 6.09527 11.5677 6.27436L6.96577 13.1577C6.85552 13.3234 6.67118 13.4167 6.48102 13.4167Z" fill="currentColor"/>
+                    </svg>                  
+                    News feed
+                  </h2>
+                </div>
+                <div class="divide-y ps-4 pe-3 scroll-y">
+                  <article class="media-sm"> 
+                    <div class="media-img">
+                      <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="media-img">
+                      <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="media-img">
+                      <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="media-img">
+                      <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="media-img">
+                      <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="media-img">
+                      <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="card mb-4">
+                <div class="card-header p-0">
+                  <h2 class="h5 mb-0 d-flex justify-content-between">
+                    <div class="p-4">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary me-1">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99954 12.2499C6.84437 12.2499 6.69621 12.1887 6.58654 12.0784L2.05579 7.54008C0.868122 6.35008 0.868122 4.414 2.05579 3.224C2.62921 2.65 3.39512 2.33325 4.21121 2.33325C5.02729 2.33325 5.79321 2.65 6.36662 3.224L6.99954 3.85809L7.63187 3.22459C8.20587 2.65 8.97179 2.33325 9.78787 2.33325C10.604 2.33325 11.3699 2.65 11.9433 3.224C13.131 4.414 13.131 6.35008 11.9439 7.54008L7.41254 12.079C7.30287 12.1887 7.15471 12.2499 6.99954 12.2499Z" fill="currentColor"/>
+                      </svg>
+                      Top posts
+                    </div>
+                    <div class="card-header-label p-4">
+                      <span>This week</span>
+                    </div>
+                  </h2>
+                </div>
+                <div class="divide-y ps-4 pe-3 scroll-y">
+                  <article class="media-sm"> 
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm">
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm">
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                  <article class="media-sm"> 
+                    <div class="flex-grow-1">
+                      <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                      <div class="text-xxs text-muted">5 min ago</div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </aside>
+          </div><!-- /.col-md-auto -->
+          <div class="col-md-auto order-md-3">
+            <aside class="w-aside sidebar">
+              <a href="#" class="d-block d-md-none mb-4">
+                <img src="assets/img/img-01.jpg" alt="" class="w-100 rounded">
+              </a>
+
+              <div class="widget-stats dark mb-4">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="d-flex align-items-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block text-primary me-2">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.5815 16 0 12.4185 0 8C0 3.5815 3.5815 0 8 0C12.4185 0 16 3.5815 16 8C16 12.4185 12.4185 16 8 16ZM11.5945 7.01C11.7515 5.962 10.953 5.3985 9.862 5.0225L10.216 3.6025L9.352 3.3875L9.007 4.77C8.78 4.713 8.547 4.66 8.3145 4.607L8.662 3.2155L7.798 3L7.444 4.4195C7.256 4.3765 7.071 4.3345 6.892 4.2895L6.893 4.285L5.701 3.9875L5.471 4.9105C5.471 4.9105 6.1125 5.0575 6.099 5.0665C6.449 5.154 6.512 5.3855 6.5015 5.5695L6.0985 7.187C6.1225 7.193 6.1535 7.202 6.1885 7.2155L6.097 7.193L5.532 9.459C5.489 9.565 5.3805 9.7245 5.1355 9.664C5.1445 9.6765 4.5075 9.5075 4.5075 9.5075L4.0785 10.4965L5.2035 10.777C5.4125 10.8295 5.6175 10.8845 5.819 10.936L5.4615 12.372L6.325 12.587L6.679 11.167C6.915 11.2305 7.144 11.2895 7.368 11.3455L7.015 12.7595L7.879 12.9745L8.2365 11.5415C9.7105 11.8205 10.8185 11.708 11.285 10.375C11.661 9.302 11.2665 8.6825 10.491 8.279C11.056 8.149 11.481 7.7775 11.5945 7.01ZM9.6195 9.779C9.353 10.8525 7.5455 10.272 6.9595 10.1265L7.4345 8.224C8.0205 8.3705 9.899 8.66 9.6195 9.779ZM9.887 6.9945C9.6435 7.971 8.1395 7.4745 7.652 7.353L8.082 5.628C8.5695 5.7495 10.141 5.976 9.887 6.9945Z" fill="currentColor"/>
+                      </svg>
+                      <div class="flex-grow-1">
+                        <span class="d-none d-md-inline">Bitcoin <span class="text-primary">$57,034.24</span></span>  +4.95%
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-inline-block d-md-none d-lg-inline-block ms-1">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4962 3.4815C10.4952 3.4455 10.4847 3.4115 10.4752 3.377C10.4677 3.348 10.4642 3.3185 10.4517 3.292C10.4402 3.266 10.4207 3.245 10.4037 3.221C10.3827 3.1905 10.3637 3.16 10.3367 3.135C10.3322 3.1305 10.3302 3.1245 10.3252 3.1205C10.3072 3.105 10.2852 3.0995 10.2657 3.087C10.2357 3.0675 10.2062 3.0475 10.1722 3.0345C10.1387 3.0225 10.1057 3.0195 10.0712 3.0145C10.0472 3.011 10.0257 3 10.0002 3H7.50025C7.22375 3 7.00025 3.224 7.00025 3.5C7.00025 3.776 7.22375 4 7.50025 4H8.91325L6.89525 6.354L4.75725 5.0715C4.54575 4.9435 4.27375 4.9905 4.11575 5.18L1.61575 8.18C1.43925 8.392 1.46775 8.7075 1.67975 8.884C1.77375 8.962 1.88675 9 1.99975 9C2.14325 9 2.28525 8.939 2.38425 8.82L4.61025 6.149L6.74275 7.429C6.95225 7.5545 7.22125 7.5105 7.37975 7.3255L9.50025 4.8515V6C9.50025 6.276 9.72375 6.5 10.0002 6.5C10.2767 6.5 10.5002 6.276 10.5002 6V3.5C10.5002 3.4935 10.4967 3.488 10.4962 3.4815Z" fill="#6FCF97"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-items-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block text-primary me-2">
+                        <circle cx="8" cy="8" r="8" fill="#F2F2F2"/>
+                        <path d="M7.97787 10.487L5 8.67545L7.97605 13L10.9554 8.67545L7.97605 10.487H7.97787ZM8.02213 3L5.04547 8.09265L8.02213 9.90728L11 8.09453L8.02213 3Z" fill="black"/>
+                      </svg>
+                      <div class="flex-grow-1">
+                        <span class="d-none d-md-inline">Ethereum <span class="text-primary">$57,034.24</span></span>  +4.95%
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-inline-block d-md-none d-lg-inline-block ms-1">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4962 3.4815C10.4952 3.4455 10.4847 3.4115 10.4752 3.377C10.4677 3.348 10.4642 3.3185 10.4517 3.292C10.4402 3.266 10.4207 3.245 10.4037 3.221C10.3827 3.1905 10.3637 3.16 10.3367 3.135C10.3322 3.1305 10.3302 3.1245 10.3252 3.1205C10.3072 3.105 10.2852 3.0995 10.2657 3.087C10.2357 3.0675 10.2062 3.0475 10.1722 3.0345C10.1387 3.0225 10.1057 3.0195 10.0712 3.0145C10.0472 3.011 10.0257 3 10.0002 3H7.50025C7.22375 3 7.00025 3.224 7.00025 3.5C7.00025 3.776 7.22375 4 7.50025 4H8.91325L6.89525 6.354L4.75725 5.0715C4.54575 4.9435 4.27375 4.9905 4.11575 5.18L1.61575 8.18C1.43925 8.392 1.46775 8.7075 1.67975 8.884C1.77375 8.962 1.88675 9 1.99975 9C2.14325 9 2.28525 8.939 2.38425 8.82L4.61025 6.149L6.74275 7.429C6.95225 7.5545 7.22125 7.5105 7.37975 7.3255L9.50025 4.8515V6C9.50025 6.276 9.72375 6.5 10.0002 6.5C10.2767 6.5 10.5002 6.276 10.5002 6V3.5C10.5002 3.4935 10.4967 3.488 10.4962 3.4815Z" fill="#6FCF97"/>
+                        </svg>  
+                      </div>                      
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-items-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block text-primary me-2">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.5815 16 0 12.4185 0 8C0 3.5815 3.5815 0 8 0C12.4185 0 16 3.5815 16 8C16 12.4185 12.4185 16 8 16ZM11.5945 7.01C11.7515 5.962 10.953 5.3985 9.862 5.0225L10.216 3.6025L9.352 3.3875L9.007 4.77C8.78 4.713 8.547 4.66 8.3145 4.607L8.662 3.2155L7.798 3L7.444 4.4195C7.256 4.3765 7.071 4.3345 6.892 4.2895L6.893 4.285L5.701 3.9875L5.471 4.9105C5.471 4.9105 6.1125 5.0575 6.099 5.0665C6.449 5.154 6.512 5.3855 6.5015 5.5695L6.0985 7.187C6.1225 7.193 6.1535 7.202 6.1885 7.2155L6.097 7.193L5.532 9.459C5.489 9.565 5.3805 9.7245 5.1355 9.664C5.1445 9.6765 4.5075 9.5075 4.5075 9.5075L4.0785 10.4965L5.2035 10.777C5.4125 10.8295 5.6175 10.8845 5.819 10.936L5.4615 12.372L6.325 12.587L6.679 11.167C6.915 11.2305 7.144 11.2895 7.368 11.3455L7.015 12.7595L7.879 12.9745L8.2365 11.5415C9.7105 11.8205 10.8185 11.708 11.285 10.375C11.661 9.302 11.2665 8.6825 10.491 8.279C11.056 8.149 11.481 7.7775 11.5945 7.01ZM9.6195 9.779C9.353 10.8525 7.5455 10.272 6.9595 10.1265L7.4345 8.224C8.0205 8.3705 9.899 8.66 9.6195 9.779ZM9.887 6.9945C9.6435 7.971 8.1395 7.4745 7.652 7.353L8.082 5.628C8.5695 5.7495 10.141 5.976 9.887 6.9945Z" fill="currentColor"/>
+                      </svg>
+                      <div class="flex-grow-1">
+                        <span class="d-none d-md-inline">Bitcoin <span class="text-primary">$57,034.24</span></span>  +4.95%
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-inline-block d-md-none d-lg-inline-block ms-1">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4962 3.4815C10.4952 3.4455 10.4847 3.4115 10.4752 3.377C10.4677 3.348 10.4642 3.3185 10.4517 3.292C10.4402 3.266 10.4207 3.245 10.4037 3.221C10.3827 3.1905 10.3637 3.16 10.3367 3.135C10.3322 3.1305 10.3302 3.1245 10.3252 3.1205C10.3072 3.105 10.2852 3.0995 10.2657 3.087C10.2357 3.0675 10.2062 3.0475 10.1722 3.0345C10.1387 3.0225 10.1057 3.0195 10.0712 3.0145C10.0472 3.011 10.0257 3 10.0002 3H7.50025C7.22375 3 7.00025 3.224 7.00025 3.5C7.00025 3.776 7.22375 4 7.50025 4H8.91325L6.89525 6.354L4.75725 5.0715C4.54575 4.9435 4.27375 4.9905 4.11575 5.18L1.61575 8.18C1.43925 8.392 1.46775 8.7075 1.67975 8.884C1.77375 8.962 1.88675 9 1.99975 9C2.14325 9 2.28525 8.939 2.38425 8.82L4.61025 6.149L6.74275 7.429C6.95225 7.5545 7.22125 7.5105 7.37975 7.3255L9.50025 4.8515V6C9.50025 6.276 9.72375 6.5 10.0002 6.5C10.2767 6.5 10.5002 6.276 10.5002 6V3.5C10.5002 3.4935 10.4967 3.488 10.4962 3.4815Z" fill="#6FCF97"/>
+                        </svg>
+                      </div>  
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-footer">
+                    <a href="#">
+                      See all <span class="d-inline d-md-none">cryptoprices</span>
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.29289 7.29289C2.90237 7.68342 2.90237 8.31658 3.29289 8.70711C3.68342 9.09763 4.31658 9.09763 4.70711 8.70711L3.29289 7.29289ZM7 5L7.70711 5.70711C8.09763 5.31658 8.09763 4.68342 7.70711 4.29289L7 5ZM4.70711 1.29289C4.31658 0.902369 3.68342 0.902369 3.29289 1.29289C2.90237 1.68342 2.90237 2.31658 3.29289 2.70711L4.70711 1.29289ZM4.70711 8.70711L7.70711 5.70711L6.29289 4.29289L3.29289 7.29289L4.70711 8.70711ZM7.70711 4.29289L4.70711 1.29289L3.29289 2.70711L6.29289 5.70711L7.70711 4.29289Z" fill="#FF5C00"/>
+                      </svg>                        
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card mb-4 d-flex d-xl-none">
+                <div class="card-header">
+                  <ul class="nav nav-tabs nav-fill card-header-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active h5" id="newsFeed-tab" data-bs-toggle="tab" data-bs-target="#newsFeed" type="button" role="tab" aria-controls="newsFeed" aria-selected="true">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary me-1">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.48102 13.4167C6.41452 13.4167 6.34743 13.405 6.28152 13.3811C6.02952 13.2895 5.87202 13.0375 5.90118 12.7709L6.34918 8.63336H2.91627C2.70102 8.63336 2.50327 8.51494 2.40177 8.32477C2.30027 8.13461 2.31193 7.90477 2.43152 7.72569L7.03285 0.842358C7.18218 0.618941 7.46452 0.526191 7.7171 0.618941C7.96968 0.710525 8.1266 0.962525 8.09743 1.22911L7.64943 5.36669H11.0829C11.2982 5.36669 11.4959 5.48511 11.5974 5.67527C11.6983 5.86544 11.6873 6.09527 11.5677 6.27436L6.96577 13.1577C6.85552 13.3234 6.67118 13.4167 6.48102 13.4167Z" fill="currentColor"/>
+                        </svg>                  
+                        Feed
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link h5" id="topPost-tab" data-bs-toggle="tab" data-bs-target="#topPost" type="button" role="tab" aria-controls="topPost" aria-selected="false">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary me-1">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99954 12.2499C6.84437 12.2499 6.69621 12.1887 6.58654 12.0784L2.05579 7.54008C0.868122 6.35008 0.868122 4.414 2.05579 3.224C2.62921 2.65 3.39512 2.33325 4.21121 2.33325C5.02729 2.33325 5.79321 2.65 6.36662 3.224L6.99954 3.85809L7.63187 3.22459C8.20587 2.65 8.97179 2.33325 9.78787 2.33325C10.604 2.33325 11.3699 2.65 11.9433 3.224C13.131 4.414 13.131 6.35008 11.9439 7.54008L7.41254 12.079C7.30287 12.1887 7.15471 12.2499 6.99954 12.2499Z" fill="currentColor"/>
+                        </svg>
+                        Top posts
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="newsFeed" role="tabpanel" aria-labelledby="newsFeed-tab">
+                    <div class="divide-y ps-4 pe-3 scroll-y">
+                      <article class="media-sm"> 
+                        <div class="media-img">
+                          <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="media-img">
+                          <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="media-img">
+                          <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="media-img">
+                          <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="media-img">
+                          <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="media-img">
+                          <img src="assets/img/img-02.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">Ethereum in 2022: What Is Money in the Metaverse?</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="topPost" role="tabpanel" aria-labelledby="topPost-tab">
+                    <div class="divide-y ps-4 pe-3 scroll-y">
+                      <article class="media-sm"> 
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm">
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm">
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                      <article class="media-sm"> 
+                        <div class="flex-grow-1">
+                          <h3 class="text-sm"><a href="#" class="stretched-link">UST Stablecoin Demand, DeFi Incentives Drive Terra’s LUNA to New All-Time High</a></h3>
+                          <div class="text-xxs text-muted">5 min ago</div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <article class="card mb-4 d-none d-md-flex">
+                <div class="card-body">
+                  <h4 class="text-sm"><a href="#">The Downside of Programmable Money Downside</a></h4>
+                  <div class="text-xxs text-muted">5 min ago</div>
+                  <a href="#" class="thumb-video mt-3">
+                    <img src="assets/img/img-04.jpg" alt="" class="rounded w-100">
+                  </a>
+                </div>
+              </article>
+              <a href="#" class="d-none d-md-block mb-4">
+                <img src="assets/img/img-05.jpg" alt="" class="w-100 rounded">
+              </a>
+
+            </aside>
+          </div><!-- /.col-md-auto -->
+          <div class="col-md order-md-2">
+            <section class="section-middle">
+              <a href="#" class="d-block mb-4">
+                <img src="assets/img/img-01.jpg" alt="" class="w-100 rounded">
+              </a>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block">
+                      <path d="M11.002 2.38811C10.7267 2.14075 10.3696 2.00391 9.9995 2.00391C9.62938 2.00391 9.27232 2.14075 8.997 2.38811L3.497 7.33011C3.34062 7.47074 3.21556 7.64268 3.12994 7.83477C3.04432 8.02686 3.00005 8.2348 3 8.44511V15.5001C3 15.8979 3.15804 16.2795 3.43934 16.5608C3.72064 16.8421 4.10218 17.0001 4.5 17.0001H6.5C6.89782 17.0001 7.27936 16.8421 7.56066 16.5608C7.84196 16.2795 8 15.8979 8 15.5001V11.5001C8 11.3675 8.05268 11.2403 8.14645 11.1466C8.24021 11.0528 8.36739 11.0001 8.5 11.0001H11.5C11.6326 11.0001 11.7598 11.0528 11.8536 11.1466C11.9473 11.2403 12 11.3675 12 11.5001V15.5001C12 15.8979 12.158 16.2795 12.4393 16.5608C12.7206 16.8421 13.1022 17.0001 13.5 17.0001H15.5C15.8978 17.0001 16.2794 16.8421 16.5607 16.5608C16.842 16.2795 17 15.8979 17 15.5001V8.44511C17 8.2348 16.9557 8.02686 16.8701 7.83477C16.7844 7.64268 16.6594 7.47074 16.503 7.33011L11.003 2.38811H11.002Z" fill="#FF5C00"/>
+                    </svg>
+                  </a></li>
+                  <li class="breadcrumb-item"><a href="#">Services</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Exchanges</li>
+                </ol>
+              </nav>
+              <article>
+                <h1 class="mb-4">Monitoring of exchanges</h1>
+              </article>
+
+              <div class="card mb-4">
+                <div class="card-header">
+                  <div class="row gx-0 align-items-center mb-4">
+                    <div class="col-sm">
+                      <div class="text-monospace text-sm text-gray3 mb-2">Giving away</div>
+                      <div class="dropdown">
+                        <button class="btn btn-light dropdown-input dropdown-toggle" type="button" id="dropdownGiving" data-bs-toggle="dropdown" aria-expanded="false">
+                          Bitcoin (BTC)
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.5815 16 0 12.4185 0 8C0 3.5815 3.5815 0 8 0C12.4185 0 16 3.5815 16 8C16 12.4185 12.4185 16 8 16ZM11.5945 7.01C11.7515 5.962 10.953 5.3985 9.862 5.0225L10.216 3.6025L9.352 3.3875L9.007 4.77C8.78 4.713 8.547 4.66 8.3145 4.607L8.662 3.2155L7.798 3L7.444 4.4195C7.256 4.3765 7.071 4.3345 6.892 4.2895L6.893 4.285L5.701 3.9875L5.471 4.9105C5.471 4.9105 6.1125 5.0575 6.099 5.0665C6.449 5.154 6.512 5.3855 6.5015 5.5695L6.0985 7.187C6.1225 7.193 6.1535 7.202 6.1885 7.2155L6.097 7.193L5.532 9.459C5.489 9.565 5.3805 9.7245 5.1355 9.664C5.1445 9.6765 4.5075 9.5075 4.5075 9.5075L4.0785 10.4965L5.2035 10.777C5.4125 10.8295 5.6175 10.8845 5.819 10.936L5.4615 12.372L6.325 12.587L6.679 11.167C6.915 11.2305 7.144 11.2895 7.368 11.3455L7.015 12.7595L7.879 12.9745L8.2365 11.5415C9.7105 11.8205 10.8185 11.708 11.285 10.375C11.661 9.302 11.2665 8.6825 10.491 8.279C11.056 8.149 11.481 7.7775 11.5945 7.01ZM9.6195 9.779C9.353 10.8525 7.5455 10.272 6.9595 10.1265L7.4345 8.224C8.0205 8.3705 9.899 8.66 9.6195 9.779ZM9.887 6.9945C9.6435 7.971 8.1395 7.4745 7.652 7.353L8.082 5.628C8.5695 5.7495 10.141 5.976 9.887 6.9945Z" fill="currentColor"/>
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownGiving">
+                          <li><a class="dropdown-item" href="#">Bitcoin (BTC)</a></li>
+                          <li><a class="dropdown-item" href="#">Ethereum (ETH)</a></li>
+                          <li><a class="dropdown-item" href="#">Tether (USDT)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="mx-2 mb-3 mb-sm-0 mt-4 pt-sm-2">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block">
+                          <path d="M13.7982 3.06504L10.9977 0.209917C10.9324 0.143365 10.8549 0.0905736 10.7697 0.0545559C10.6844 0.0185383 10.593 0 10.5006 0C10.3142 0 10.1354 0.0755095 10.0035 0.209917C9.87171 0.344325 9.79764 0.526621 9.79764 0.716702C9.79764 0.906783 9.87171 1.08908 10.0035 1.22349L11.6138 2.85805H3.49937C3.31368 2.85805 3.1356 2.93325 3.0043 3.06711C2.873 3.20097 2.79924 3.38252 2.79924 3.57183C2.79924 3.76113 2.873 3.94269 3.0043 4.07655C3.1356 4.21041 3.31368 4.28561 3.49937 4.28561H13.3011C13.4394 4.28491 13.5743 4.24251 13.6889 4.16375C13.8035 4.085 13.8927 3.97342 13.9453 3.84307C13.9989 3.71308 14.0135 3.56981 13.9874 3.43135C13.9612 3.29288 13.8954 3.16542 13.7982 3.06504V3.06504ZM10.5006 5.71317H0.698857C0.560634 5.71388 0.425709 5.75628 0.311084 5.83503C0.196459 5.91378 0.107264 6.02537 0.0547404 6.15572C0.00112503 6.2857 -0.0135235 6.42897 0.0126431 6.56744C0.0388098 6.7059 0.104619 6.83336 0.201767 6.93374L3.00228 9.78886C3.06736 9.85577 3.1448 9.90887 3.23011 9.94511C3.31543 9.98134 3.40694 10 3.49937 10C3.59179 10 3.6833 9.98134 3.76862 9.94511C3.85393 9.90887 3.93137 9.85577 3.99646 9.78886C4.06208 9.72251 4.11416 9.64356 4.14971 9.55658C4.18525 9.4696 4.20355 9.37631 4.20355 9.28208C4.20355 9.18785 4.18525 9.09456 4.14971 9.00758C4.11416 8.92059 4.06208 8.84165 3.99646 8.7753L2.38616 7.14074H10.5006C10.6863 7.14074 10.8644 7.06553 10.9957 6.93167C11.127 6.79781 11.2008 6.61626 11.2008 6.42695C11.2008 6.23765 11.127 6.05609 10.9957 5.92223C10.8644 5.78837 10.6863 5.71317 10.5006 5.71317Z" fill="#FF5C00"/>
+                        </svg>
+                      </div>       
+                    </div>
+                    <div class="col-sm">
+                      <div class="text-monospace text-sm text-gray3 mb-2">You get</div>
+                      <div class="dropdown">
+                        <button class="btn btn-light dropdown-input dropdown-toggle" type="button" id="dropdownGet" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tether (USDT)
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.5815 16 0 12.4185 0 8C0 3.5815 3.5815 0 8 0C12.4185 0 16 3.5815 16 8C16 12.4185 12.4185 16 8 16ZM8.961 6.8965V5.7135H11.668V3.9095H4.2975V5.7135H7.0045V6.896C4.8045 6.997 3.15 7.433 3.15 7.955C3.15 8.477 4.8045 8.9125 7.0045 9.014V12.805H8.961V9.013C11.1575 8.912 12.808 8.4765 12.808 7.955C12.808 7.4335 11.1575 6.998 8.961 6.8965ZM8.961 8.6915V8.6905C8.906 8.6945 8.6225 8.7115 7.99 8.7115C7.485 8.7115 7.1295 8.6965 7.0045 8.6905V8.692C5.0605 8.6065 3.6095 8.268 3.6095 7.863C3.6095 7.4585 5.0605 7.12 7.0045 7.033V8.355C7.1315 8.364 7.4955 8.3855 7.9985 8.3855C8.602 8.3855 8.9045 8.3605 8.961 8.3555V7.034C10.901 7.1205 12.3485 7.459 12.3485 7.863C12.3485 8.268 10.901 8.6055 8.961 8.6915Z" fill="#FF5C00"/>
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownGet">
+                          <li><a class="dropdown-item" href="#">Bitcoin (BTC)</a></li>
+                          <li><a class="dropdown-item" href="#">Ethereum (ETH)</a></li>
+                          <li><a class="dropdown-item" href="#">Tether (USDT)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-sm">
+                      <div class="d-flex align-items-center dropdown-text">
+                        Filter by
+                        <div class="dropdown">
+                          <button class="btn dropdown-toggle" type="button" id="dropdownFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-primary">Best price</span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+                            <li><a class="dropdown-item" href="#">Best price</a></li>
+                            <li><a class="dropdown-item" href="#">Popular</a></li>
+                            <li><a class="dropdown-item" href="#">Relevance</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-auto mt-3 mt-sm-0">
+                      <div class="d-flex">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchAvailable" checked>
+                          <label class="form-check-label" for="flexSwitchAvailable">Available</label>
+                        </div>
+                        <div class="form-check form-switch ms-4">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchReviews" checked>
+                          <label class="form-check-label" for="flexSwitchReviews">Reviews</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-nowrap">
+                    <thead>
+                      <tr>
+                        <th class="text-xs">Exchange</th>
+                        <th class="text-xs text-end">Amount</th>
+                        <th class="text-xs text-end">You get</th>
+                        <th class="text-xs text-end">Volume</th>
+                        <th class="text-xs text-end">Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-monospace text-sm text-gray2">
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          CoinBene
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-success">4,9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          Binance
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-warning">4,2</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          Huobi
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-danger">3,6</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          Btirrex
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-success">4,9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          CoinEx
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-success">4,9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          Kucoin
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-success">4,9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          Coinbase
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-success">4,9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                          </svg>
+                          Coinbase
+                        </td>
+                        <td class="text-end">1</td>
+                        <td class="text-end">62 981</td>
+                        <td class="text-end">$ 11,600,630</td>
+                        <td class="text-end text-success">4,9</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <div class="text-monospace text-sm text-gray3">
+                <p>
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968502 5.00555 0.0960758 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C10 4.34339 9.87067 3.69321 9.6194 3.08658C9.36812 2.47995 8.99983 1.92876 8.53553 1.46447C8.07124 1.00017 7.52005 0.631876 6.91342 0.380602C6.30679 0.129329 5.65661 0 5 0ZM5.5 7C5.5 7.13261 5.44732 7.25979 5.35356 7.35355C5.25979 7.44732 5.13261 7.5 5 7.5C4.86739 7.5 4.74022 7.44732 4.64645 7.35355C4.55268 7.25979 4.5 7.13261 4.5 7V4.5C4.5 4.36739 4.55268 4.24022 4.64645 4.14645C4.74022 4.05268 4.86739 4 5 4C5.13261 4 5.25979 4.05268 5.35356 4.14645C5.44732 4.24022 5.5 4.36739 5.5 4.5V7ZM5 3.5C4.90111 3.5 4.80444 3.47068 4.72222 3.41574C4.63999 3.36079 4.57591 3.28271 4.53806 3.19134C4.50022 3.09998 4.49032 2.99945 4.50961 2.90246C4.5289 2.80546 4.57652 2.71637 4.64645 2.64645C4.71637 2.57652 4.80547 2.5289 4.90246 2.50961C4.99945 2.49031 5.09998 2.50022 5.19134 2.53806C5.28271 2.5759 5.3608 2.63999 5.41574 2.72222C5.47068 2.80444 5.5 2.90111 5.5 3C5.5 3.13261 5.44732 3.25979 5.35356 3.35355C5.25979 3.44732 5.13261 3.5 5 3.5Z" fill="currentColor"/>
+                  </svg>
+                  In the monitoring, you can see the exchanges where bitcoin and altcoins are traded, as well as other electronic currencies, their main features, advantages and disadvantages. For the convenience of choosing in our monitoring, the exchanges are sorted by the most favorable rate, as well as by the daily trading volume.</p>
+                <p>Attention! Information about cryptocurrency exchanges may not be completely reliable, since it was received from representatives of the services and API of the exchanges. Before making any transactions, look at user reviews of your chosen exchange and topics on the forum . We recommend splitting large exchanges into several smaller ones in order to reduce risks.</p>
+              </div>
+              
+            </section>
+          </div><!-- /.col-md- -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-lg-auto">
+              <div class="w-aside">
+                <img src="assets/img/logo-text.svg" alt="">
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="row">
+                <div class="col-sm-4 mt-4 mt-lg-0">
+                  <h4>News</h4>
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Coins</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tokens</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Trading</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4 mt-4 mt-lg-0">
+                  <h4>Crypto Academy</h4>
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">Bitcoin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Etherium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Other crypto</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4 mt-4 mt-lg-0">
+                  <h4>Services</h4>
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">Wallets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Exchanges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-auto d-none d-lg-block">
+              <ul class="nav list-social">
+                <li class="nav-item"><a href="#" class="nav-link">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73078 16.6669C12.7691 16.6669 16.2624 11.9786 16.2624 7.52944C16.2624 7.40694 17.1208 6.67027 17.4883 5.13444C17.5633 4.82277 17.2599 4.57694 16.9741 4.70777C16.2408 5.04444 15.4966 4.77777 15.1733 4.39444C13.9299 3.0386 11.8508 2.9736 10.5283 4.2486C9.67578 5.0711 9.31411 6.2961 9.57828 7.46527C6.78578 7.66444 4.86828 6.3411 3.29161 4.52694C3.08828 4.2911 2.71078 4.41527 2.66828 4.72694C2.43494 6.46194 2.36161 10.6803 6.54161 13.1028C5.81578 14.1461 4.39494 14.7619 2.81328 15.0261C2.46328 15.0853 2.37994 15.5703 2.69994 15.7269C3.95328 16.3436 5.33078 16.6661 6.73078 16.6644" fill="currentColor"/>
+                  </svg>
+                </a></li>
+                <li class="nav-item"><a href="#" class="nav-link">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.92862 4.375C2.92862 3.34 3.76862 2.5 4.80362 2.5C5.83862 2.5 6.67862 3.34 6.67862 4.375C6.67862 5.41 5.83862 6.25 4.80362 6.25C3.76862 6.25 2.92862 5.41 2.92862 4.375ZM13.0539 7.00033C10.3614 7.00033 8.17806 9.17033 8.17806 11.8453V16.7495C8.17806 17.1637 8.51472 17.5003 8.92889 17.5003H10.6781C11.0922 17.5003 11.4289 17.1637 11.4289 16.7495V11.8453C11.4289 10.8987 12.2489 10.142 13.2222 10.2395C14.0672 10.3237 14.6781 11.0962 14.6781 11.9453V16.7495C14.6781 17.1637 15.0147 17.5003 15.4289 17.5003H17.1781C17.5922 17.5003 17.9289 17.1637 17.9289 16.7495V11.8453C17.9289 9.17033 15.7456 7.00033 13.0539 7.00033ZM5.92822 7.74983H3.67906C3.26489 7.74983 2.92822 8.08567 2.92822 8.49983V16.7498C2.92822 17.164 3.26489 17.4998 3.67906 17.4998H5.92822C6.34239 17.4998 6.67822 17.164 6.67822 16.7498V8.49983C6.67822 8.08567 6.34239 7.74983 5.92822 7.74983Z" fill="currentColor"/>
+                  </svg>
+                </a></li>
+                <li class="nav-item"><a href="#" class="nav-link">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0236 2.91667C15.0236 2.68667 14.8361 2.5 14.6069 2.5H12.5236C10.2219 2.5 8.35693 4.17917 8.35693 6.25V8.5H6.2736C6.0436 8.5 5.85693 8.68667 5.85693 8.91667V11.0833C5.85693 11.3133 6.0436 11.5 6.2736 11.5H8.35693V17.0833C8.35693 17.3133 8.5436 17.5 8.7736 17.5H11.2736C11.5028 17.5 11.6903 17.3133 11.6903 17.0833V11.5H13.8728C14.0603 11.5 14.2244 11.375 14.2753 11.195L14.8761 9.02833C14.9503 8.76333 14.7503 8.5 14.4753 8.5H11.6903V6.25C11.6903 5.83583 12.0628 5.5 12.5236 5.5H14.6069C14.8361 5.5 15.0236 5.31333 15.0236 5.08333V2.91667Z" fill="currentColor"/>
+                  </svg>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-auto order-2 d-block d-lg-none">
+              <ul class="nav list-social">
+                <li class="nav-item"><a href="#" class="nav-link">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73078 16.6669C12.7691 16.6669 16.2624 11.9786 16.2624 7.52944C16.2624 7.40694 17.1208 6.67027 17.4883 5.13444C17.5633 4.82277 17.2599 4.57694 16.9741 4.70777C16.2408 5.04444 15.4966 4.77777 15.1733 4.39444C13.9299 3.0386 11.8508 2.9736 10.5283 4.2486C9.67578 5.0711 9.31411 6.2961 9.57828 7.46527C6.78578 7.66444 4.86828 6.3411 3.29161 4.52694C3.08828 4.2911 2.71078 4.41527 2.66828 4.72694C2.43494 6.46194 2.36161 10.6803 6.54161 13.1028C5.81578 14.1461 4.39494 14.7619 2.81328 15.0261C2.46328 15.0853 2.37994 15.5703 2.69994 15.7269C3.95328 16.3436 5.33078 16.6661 6.73078 16.6644" fill="currentColor"/>
+                  </svg>
+                </a></li>
+                <li class="nav-item"><a href="#" class="nav-link">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.92862 4.375C2.92862 3.34 3.76862 2.5 4.80362 2.5C5.83862 2.5 6.67862 3.34 6.67862 4.375C6.67862 5.41 5.83862 6.25 4.80362 6.25C3.76862 6.25 2.92862 5.41 2.92862 4.375ZM13.0539 7.00033C10.3614 7.00033 8.17806 9.17033 8.17806 11.8453V16.7495C8.17806 17.1637 8.51472 17.5003 8.92889 17.5003H10.6781C11.0922 17.5003 11.4289 17.1637 11.4289 16.7495V11.8453C11.4289 10.8987 12.2489 10.142 13.2222 10.2395C14.0672 10.3237 14.6781 11.0962 14.6781 11.9453V16.7495C14.6781 17.1637 15.0147 17.5003 15.4289 17.5003H17.1781C17.5922 17.5003 17.9289 17.1637 17.9289 16.7495V11.8453C17.9289 9.17033 15.7456 7.00033 13.0539 7.00033ZM5.92822 7.74983H3.67906C3.26489 7.74983 2.92822 8.08567 2.92822 8.49983V16.7498C2.92822 17.164 3.26489 17.4998 3.67906 17.4998H5.92822C6.34239 17.4998 6.67822 17.164 6.67822 16.7498V8.49983C6.67822 8.08567 6.34239 7.74983 5.92822 7.74983Z" fill="currentColor"/>
+                  </svg>
+                </a></li>
+                <li class="nav-item"><a href="#" class="nav-link">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0236 2.91667C15.0236 2.68667 14.8361 2.5 14.6069 2.5H12.5236C10.2219 2.5 8.35693 4.17917 8.35693 6.25V8.5H6.2736C6.0436 8.5 5.85693 8.68667 5.85693 8.91667V11.0833C5.85693 11.3133 6.0436 11.5 6.2736 11.5H8.35693V17.0833C8.35693 17.3133 8.5436 17.5 8.7736 17.5H11.2736C11.5028 17.5 11.6903 17.3133 11.6903 17.0833V11.5H13.8728C14.0603 11.5 14.2244 11.375 14.2753 11.195L14.8761 9.02833C14.9503 8.76333 14.7503 8.5 14.4753 8.5H11.6903V6.25C11.6903 5.83583 12.0628 5.5 12.5236 5.5H14.6069C14.8361 5.5 15.0236 5.31333 15.0236 5.08333V2.91667Z" fill="currentColor"/>
+                  </svg>
+                </a></li>
+              </ul>
+            </div>
+            <div class="col order-1">
+              <p class="copy">All rights reserved 2021.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

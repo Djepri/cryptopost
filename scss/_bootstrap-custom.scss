@@ -1,0 +1,187 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+
+
+// Customize some defaults
+$white:    #fff;
+$gray-100: #F2F2F2;
+$gray-200: #E0E0E0;
+$gray-300: #BDBDBD;
+$gray-400: #989898;
+$gray-500: #828282;
+$gray-600: #4F4F4F;
+$gray-700: #30232A;
+$gray-800: #2F2F33;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #EB5757;
+$orange:  #FF5C00;
+$yellow:  #F2994A;
+$green:   #6FCF97;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+$primary: $orange;
+$dark:    $gray-800; 
+
+$body-bg: $gray-100;
+
+$border-color: $gray-100;
+
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-lexend: 'Lexend Deca', sans-serif;
+$font-family-heading: 'Space Grotesk', sans-serif;
+$font-family-monospace: 'Space Mono', monospace;
+
+$headings-font-family: $font-family-heading;
+$headings-font-weight: 700;
+
+$h1-font-size:         2.25rem;
+$h2-font-size:         1.875rem;
+$h3-font-size:         1.5rem;
+$h4-font-size:         1.25rem;
+$h5-font-size:         1.125rem;
+
+$text-muted:           $gray-400;
+
+$input-btn-font-family: $font-family-heading;
+$input-btn-padding-y:   .4375rem;
+$btn-font-weight:       700;
+$input-font-weight:     700;
+$input-border-color:    $gray-100;
+
+$input-padding-y-lg:          .875rem;
+$input-font-size-lg:          1rem;
+$input-border-radius-lg:      .1875rem;
+
+$btn-padding-y-lg:            1.3125rem;
+$btn-padding-x-lg:            1.75rem;
+$btn-font-size-lg:            1rem;
+$btn-border-radius-lg:        .1875rem;
+
+$form-label-font-size:        .75rem;
+$form-label-font-weight:      700;
+
+$border-radius:         .1875rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 740px,
+  lg: 890px,
+  xl: 1184px
+);
+
+$navbar-padding-y:                  1.625rem;
+$navbar-light-color:                $gray-700;
+$navbar-light-hover-color:          $orange;
+$navbar-light-active-color:         $orange;
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$orange}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+$navbar-toggler-padding-y:          .3125rem;
+$navbar-toggler-padding-x:          .3125rem;
+
+$dropdown-border-color:             $gray-100;
+$dropdown-link-hover-bg:            $gray-100;
+
+$card-cap-padding-y:                1.5rem;
+$card-cap-padding-x:                1.5rem;
+$card-spacer-y:                     1.5rem;
+$card-spacer-x:                     1.5rem;
+$card-border-color:                 $gray-100;
+$card-cap-bg:                       $white;
+
+$list-group-border-color:           $gray-100;
+$list-group-item-padding-x:         1.5rem;
+
+$pagination-padding-y:              .5rem;
+
+$pagination-bg:                     $gray-800;
+$pagination-border-color:           $gray-800;
+$pagination-margin-start:           0;
+
+$pagination-focus-color:            $white;
+$pagination-focus-bg:               $orange;
+
+$pagination-hover-color:            $white;
+$pagination-hover-bg:               $orange;
+$pagination-hover-border-color:     $orange;
+
+$breadcrumb-font-size:              .8125rem;
+$breadcrumb-active-color:           $orange;
+
+$table-striped-bg:                  $gray-100;
+
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
